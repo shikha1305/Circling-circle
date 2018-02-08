@@ -1,0 +1,121 @@
+.circle:after,.star:after {
+  content:"";
+  position:absolute;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  transform-origin:center;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.circle,.star{
+  position:absolute;
+}
+#green {
+  transform-origin:center center;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#green:after {
+  transform-origin:center center;
+  background: radial-gradient(circle, #13c2ce, #17c490);
+  margin:auto;
+  width:70px;
+  height:70px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#purple {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 4s linear infinite;
+}
+#purple:after {
+  top:100px;
+  left:100px;
+  background: radial-gradient(circle, #487ef6, #7378f4);
+}
+.Orbit {
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  border-left: 4px solid #c9c3c3;
+  border-top : 4px solid #c9c3c3;
+  border-right : 4px solid #c9c3c3;
+  border-bottom : 4px solid #c9c3c3;
+  border-radius: 50%;  
+}
+#yellow {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:clockwiseSpin 8s linear infinite;
+}
+#yellow:after {
+  top:150px;
+  left:150px;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, #ffaa24, #fec70b);
+}
+#red {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 16s linear infinite;
+}
+#red:after {
+  top:200px;
+  left:200px;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #ff5640, #ff4b7b);
+}
+#purpleOrbit {
+  width: 140px;
+  height: 140px;
+  animation:clockwiseSpin 4s linear infinite;
+  animation:clockwiseSpin 4s linear infinite;
+}
+#yellowOrbit {
+  width: 210px;
+  height: 210px;
+  animation:antiClockwiseSpin 8s linear infinite;
+  animation:antiClockwiseSpin 8s linear infinite;
+}
+#redOrbit {
+  width: 280px;
+  height: 280px;
+  animation:clockwiseSpin 16s linear infinite;
+  animation:clockwiseSpin 16s linear infinite;
+}
+@keyframes planetMove {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+@keyframes clockwiseSpin {
+  0% {transform : rotate(0deg)}
+  100% {transform : rotate(-360deg)}
+}
+@keyframes antiClockwiseSpin {
+  0%  {transform: rotate(-360deg);}
+  100% {transform: rotate(0deg);} 
+}
